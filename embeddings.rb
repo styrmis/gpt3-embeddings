@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'dotenv'
 require 'ruby/openai'
 require 'csv'
