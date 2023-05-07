@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "ruby-openai"
-gem "cosine-similarity"
+gem 'cosine-similarity'
+gem 'ruby-openai'
+gem 'tiktoken_ruby'

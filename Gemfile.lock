@@ -13,6 +13,7 @@ GEM
       faraday (>= 1)
       faraday-multipart (>= 1)
     ruby2_keywords (0.0.5)
+    tiktoken_ruby (0.0.4-x86_64-darwin)
 
 PLATFORMS
   x86_64-darwin-21
@@ -20,6 +21,7 @@ PLATFORMS
 DEPENDENCIES
   cosine-similarity
   ruby-openai
+  tiktoken_ruby
 
 BUNDLED WITH
    2.3.25
