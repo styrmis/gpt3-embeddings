@@ -9,7 +9,7 @@ Dotenv.load
 
 openai = OpenAI::Client.new(access_token: ENV['OPENAI_API_KEY'])
 
-puts 'Welcome to the Sterling Parts AI Knowledge Base. How can I help you?'
+puts 'Transcript bot'
 question = gets
 
 response = openai.embeddings(
@@ -36,14 +36,13 @@ CSV.foreach('embeddings.csv', headers: true).with_index do |row, rowno|
 end
 
 prompt =
-  "You are an AI assistant. You work for Sterling Parts which is a car parts online store located in Australia.
+  "You are an AI assistant. You answer questions about the Push Bible which was an online video course created by Andri.
 You will be asked questions from a customer and will answer in a helpful and friendly manner.
+You will be provided information from the course under the [Content] section. The customer question
+will be provided unders the [Question] section. You will answer the customer's questions based on the content.
+If the users question is not answered by the content then you will respond with 'I'm sorry I don't know.'
 
-You will be provided company information from Sterline Parts under the [Article] section. The customer question
-will be provided unders the [Question] section. You will answer the customers questions based on the article.
-If the users question is not answered by the article you will respond with 'I'm sorry I don't know.'
-
-[Article]
+[Content]
 #{original_text}
 
 [Question]
@@ -58,5 +57,5 @@ response = openai.completions(
   }
 )
 
-puts "\nAI response:\n"
+puts "\nResponse:\n"
 puts response['choices'][0]['text'].lstrip
