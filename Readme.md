@@ -1,12 +1,13 @@
 # GPT-3 (OpenAI) Semantic Search example
+
 ## OpenAI Embeddings
 
-This repo is taken from the reinteractive article 
+This repo is based on the reinteractive article
 [Creating an Intelligent Knowledge Base Q&A App with GPT-3 and Ruby](https://medium.com/@kane.hooper/creating-an-intelligent-knowledge-base-q-a-app-with-gpt-3-and-ruby-646744eb6e4)
 
 
-The purpose of this file is to provide an example of how to use OpenAI embeddings to create 
-a knowledge base Q&A. The technology implements semantic search 
+The purpose of this file is to provide an example of how to use OpenAI embeddings to create
+a knowledge base Q&A. The technology implements semantic search
 
 This example has two major Ruby files:
 
@@ -24,14 +25,9 @@ You can provide any text files in the training-data, with the following conditio
 
 If you have a document greater than 2000 words you will need to split it up into multiple pages.
 
-## Setting up the script
+## Setup
 
-Install the required dependencies.
-
-```
-gem install ruby-openai
-gem install cosine-similarity
-```
+`bundle install`
 
 ## Preparing training data
 
